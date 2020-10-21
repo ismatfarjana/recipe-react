@@ -1,4 +1,5 @@
 import React from "react";
+import Posts from "./components/Posts";
 
 import "./App.css";
 
@@ -8,6 +9,12 @@ function App() {
       <header className="App-header">
         <h1>Recipe Blog</h1>
       </header>
+
+      <body>
+        <div className="postlist">
+          <Posts />
+        </div>
+      </body>
 
       <footer>
         <div className="footer-parts">
