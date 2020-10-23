@@ -18,7 +18,7 @@ function Authentication() {
         email: registerUserEmail,
         password: registerUserPassword
       },
-      withCredentials: true, //why?????
+      withCredentials: false, //why?????
       url: "https://syeda-recipe-api.herokuapp.com/api/users/register"
     })
       .then(res => console.log(res))
