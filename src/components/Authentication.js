@@ -62,38 +62,57 @@ function Authentication() {
     <div className="auth">
       <div className="auth_parts">
         <h2>Register</h2>
-        <input
-          placeholder="name"
-          onChange={e => setRegisterUserName(e.target.value)}
-        />
-        <input
-          placeholder="email"
-          onChange={e => setRegisterUserEmail(e.target.value)}
-        />
-        <input
-          placeholder="password"
-          onChange={e => setRegisterUserPassword(e.target.value)}
-        />
-        <button onClick={register}>Submit</button>
+        <label>
+          <input
+            placeholder="name"
+            onChange={e => setRegisterUserName(e.target.value)}
+          />
+        </label>
+        <label>
+          <input
+            placeholder="email"
+            onChange={e => setRegisterUserEmail(e.target.value)}
+          />
+        </label>
+        <label>
+          <input
+            placeholder="password"
+            onChange={e => setRegisterUserPassword(e.target.value)}
+          />
+        </label>
+
+        <button type="submit" onClick={register}>
+          Submit
+        </button>
       </div>
 
       <div className="auth_parts">
         <h2>Login</h2>
-        <input
-          placeholder="email"
-          onChange={e => setLoginUserEmail(e.target.value)}
-        />
-        <input
-          placeholder="password"
-          onChange={e => setLoginUserPassword(e.target.value)}
-        />
-        <button onClick={login}>Submit</button>
+        <label>
+          <input
+            placeholder="email"
+            onChange={e => setLoginUserEmail(e.target.value)}
+          />
+        </label>
+
+        <label>
+          <input
+            placeholder="password"
+            onChange={e => setLoginUserPassword(e.target.value)}
+          />
+        </label>
+
+        <button type="submit" onClick={login}>
+          Submit
+        </button>
       </div>
 
       <div className="auth_parts">
         <h2>Get User</h2>
 
-        <button onClick={getUser}>Submit</button>
+        <button type="submit" onClick={getUser}>
+          Submit
+        </button>
         {data ? <h1>Welcome Back {data.name}</h1> : null}
       </div>
     </div>

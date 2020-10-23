@@ -14,13 +14,12 @@ export default class AddPost extends Component {
   render() {
     return (
       <form>
+        <h2> Create Post</h2>
         <label>
-          Post Title:
-          <input type="text" />
+          <input placeholder="Title" type="text" />
         </label>
         <label>
-          Post Description:
-          <input type="text" />
+          <input placeholder="Description" type="text" />
         </label>
         <input type="submit" value="submit" />
       </form>

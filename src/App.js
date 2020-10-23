@@ -10,9 +10,15 @@ function App() {
         <h1>Recipe Blog</h1>
       </header>
 
-      <div className="postlist">
-        <Authentication />
-        <Posts />
+      <div className="body">
+        <div className="postlist">
+          <div className="postlist_part">
+            <Authentication />
+          </div>
+          <div className="postlist_part">
+            <Posts />
+          </div>
+        </div>
       </div>
 
       <footer>
