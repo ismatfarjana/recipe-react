@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 
 function Authentication() {
   //create states for differnt authentication parts to store the state of wht user is typing
@@ -11,7 +11,7 @@ function Authentication() {
   const [data, setData] = useState(null);
 
   const register = () => {
-    Axios({
+    axios({
       method: "POST",
       data: {
         name: registerUserName,
@@ -26,13 +26,13 @@ function Authentication() {
   };
 
   const login = () => {
-    Axios({
+    axios({
       method: "POST",
       data: {
         email: loginUserEmail,
         password: loginUserPassword
       },
-      withCredentials: true, //why?????
+      withCredentials: false, //why?????
       url: "https://syeda-recipe-api.herokuapp.com/api/users/login"
     })
       .then(res => console.log(res))
@@ -40,9 +40,9 @@ function Authentication() {
   };
 
   const getUser = () => {
-    Axios({
+    axios({
       method: "GET",
-      withCredentials: true, //why?????
+      withCredentials: false, //why?????
       url: "https://syeda-recipe-api.herokuapp.com/api/users/all"
     })
       .then(res => setData(res.data))
