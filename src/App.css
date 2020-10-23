@@ -33,7 +33,8 @@ a {
 }
 
 /* form */
-form {
+form,
+.auth {
   display: flex;
   flex-flow: column;
   text-align: left;
