@@ -21,7 +21,12 @@ function Authentication() {
       withCredentials: false, //why?????
       url: "https://syeda-recipe-api.herokuapp.com/api/users/register"
     })
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res);
+        setRegisterUserName(" ");
+        setRegisterUserEmail(" ");
+        setRegisterUserPassword(" ");
+      })
       .catch();
   };
 
@@ -35,7 +40,11 @@ function Authentication() {
       withCredentials: false, //why?????
       url: "https://syeda-recipe-api.herokuapp.com/api/users/login"
     })
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res);
+        setLoginUserEmail("");
+        setLoginUserPassword("");
+      })
       .catch();
   };
 
