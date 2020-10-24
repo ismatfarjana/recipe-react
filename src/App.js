@@ -1,14 +1,16 @@
 import React from "react";
 import Posts from "./components/Posts";
+import "./App.css";
 import Authentication from "./components/Authentication";
 import Route from "./components/Route";
-import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Recipe Blog</h1>
+        <Header />
       </header>
 
       <div className="body">

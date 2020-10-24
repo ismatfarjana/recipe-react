@@ -32,6 +32,11 @@ a {
   color: white;
 }
 
+.navbar > a {
+  padding: 0 15px;
+  justify-content: space-evenly;
+}
+
 .body > .postlist {
   margin-bottom: 10px;
   display: flex;
