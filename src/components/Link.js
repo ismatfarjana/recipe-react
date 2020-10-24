@@ -9,9 +9,15 @@ import React from "react";
 const Link = ({ className, href, children }) => {
   //do not reload
   //change url without fullpage refresh
+  //anytime we change the url by clicking the link on nav bar, all route components needs to detect that change.
+  //whenever user clickes on link, we produce and emit a navigation event which tell the different routs that url has just changed
+  //for detecting navigation: nav event
   const onClick = event => {
-    event.preventDefault();
-    window.history.pushState({}, "", href);
+    event.preventDefault(); //preventing default
+    window.history.pushState({}, "", href); //change url while user click
+
+    const navEvent = new PopStateEvent("popstate"); // this is going to the routes components and telling themthat url has changed ( qstn: what is popstateevent???)
+    window.dispatchEvent(navEvent);
   };
 
   //return
