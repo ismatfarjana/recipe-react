@@ -1,6 +1,7 @@
 import React from "react";
 import Posts from "./components/Posts";
 import Authentication from "./components/Authentication";
+import Route from "./components/Route";
 import "./App.css";
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
       <div className="body">
         <div className="postlist">
           <div className="postlist_part">
-            <Authentication />
+            {/* when one jsx is provided another jsx tag the inner element is provided to the outer element as a prop called children , here the authentication component will show inside the route componet as a childern */}
+            <Route path="/api/users/register">
+              <Authentication />
+            </Route>
           </div>
           <div className="postlist_part">
             <Posts />
