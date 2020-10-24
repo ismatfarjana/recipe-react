@@ -1,6 +1,6 @@
 import React from "react";
-import Posts from "./components/Posts";
 import "./App.css";
+import Posts from "./components/Posts";
 import Authentication from "./components/Authentication";
 import Route from "./components/Route";
 import Header from "./components/Header";
@@ -14,8 +14,8 @@ function App() {
       </header>
 
       <div className="body">
-        <div className="postlist">
-          <div className="postlist_part">
+        <div className="list">
+          <div className="list_part">
             {/* when one jsx is provided another jsx tag the inner element is provided to the outer element as a prop called children , here the authentication component will show inside the route componet as a childern */}
             <Route path="/api/users/register">
               <Authentication />

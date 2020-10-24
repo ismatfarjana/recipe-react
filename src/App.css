@@ -37,7 +37,7 @@ a {
   justify-content: space-evenly;
 }
 
-.body > .postlist {
+.body > .list {
   margin-bottom: 10px;
   display: flex;
   flex-flow: row;
