@@ -20,7 +20,9 @@ function App() {
             </Route>
           </div>
           <div className="postlist_part">
-            <Posts />
+            <Route path="/api/posts">
+              <Posts />
+            </Route>
           </div>
         </div>
       </div>
