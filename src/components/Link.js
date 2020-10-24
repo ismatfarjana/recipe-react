@@ -13,6 +13,10 @@ const Link = ({ className, href, children }) => {
   //whenever user clickes on link, we produce and emit a navigation event which tell the different routs that url has just changed
   //for detecting navigation: nav event
   const onClick = event => {
+    //  if (event.metaKey || event.ctrlKey) {
+    //   return;
+    // } // this part to open a new tab by holding controll button on keyboard while clicking on any nav link
+
     event.preventDefault(); //preventing default
     window.history.pushState({}, "", href); //change url while user click
 
