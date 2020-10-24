@@ -4,11 +4,15 @@ import Link from "./Link"; //link is to create route without full reloading the 
 const Header = () => {
   return (
     <div className="navbar">
+      <Link href="/" className="item">
+        Home
+      </Link>
+
+      <Link href="/api/posts" className="item">
+        Posts
+      </Link>
       <Link href="/api/users/register" className="item">
         Register / Login
-      </Link>
-      <Link href="/api/posts" className="item">
-        All Posts
       </Link>
     </div>
   );

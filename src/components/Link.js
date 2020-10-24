@@ -7,8 +7,16 @@ import React from "react";
 
 //we need three props here: classname, href, children
 const Link = ({ className, href, children }) => {
+  //do not reload
+  //change url without fullpage refresh
+  const onClick = event => {
+    event.preventDefault();
+    window.history.pushState({}, "", href);
+  };
+
+  //return
   return (
-    <a className={className} href={href}>
+    <a onClick={onClick} className={className} href={href}>
       {children}
     </a>
   );
