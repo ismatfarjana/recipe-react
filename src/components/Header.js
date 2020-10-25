@@ -12,7 +12,10 @@ const Header = () => {
         Posts
       </Link>
       <Link href="/api/users/register" className="item">
-        Register / Login
+        Register
+      </Link>
+      <Link href="/api/users/login" className="item">
+        Login
       </Link>
     </div>
   );
