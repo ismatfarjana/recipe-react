@@ -7,8 +7,6 @@ function Register() {
   const [registerUserEmail, setRegisterUserEmail] = useState("");
   const [registerUserPassword, setRegisterUserPassword] = useState("");
 
-  // const [data, setData] = useState(null);
-
   const register = () => {
     axios({
       method: "POST",
@@ -28,16 +26,6 @@ function Register() {
       })
       .catch();
   };
-
-  // const getUser = () => {
-  //   axios({
-  //     method: "GET",
-  //     withCredentials: false, //why?????
-  //     url: "https://syeda-recipe-api.herokuapp.com/api/users/all"
-  //   })
-  //     .then(res => setData(res.data))
-  //     .catch();
-  // };
 
   return (
     <div className="auth">
@@ -66,15 +54,6 @@ function Register() {
           Submit
         </button>
       </div>
-
-      {/* <div className="auth_parts">
-        <h2>Get User</h2>
-
-        <button type="submit" onClick={getUser}>
-          Submit
-        </button>
-        {data ? <h1>Welcome Back {data.name}</h1> : null}
-      </div> */}
     </div>
   );
 }

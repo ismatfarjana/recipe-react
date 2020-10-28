@@ -21,6 +21,7 @@ export default class Posts extends Component {
     axios
       .get("https://syeda-recipe-api.herokuapp.com/api/posts/")
       .then(res => {
+        console.log(res.data);
         this.setState({ posts: res.data });
       })
       .catch();
@@ -62,20 +63,29 @@ export default class Posts extends Component {
 
   //render item
   render() {
+    const loggedIn = this.props.loggedIn;
     return (
       //return component item
-      <div className="list">
-        <div className="list_part">
-          {this.state.posts.length ? (
-            this.renderAllPosts
-          ) : (
-            <h3>Wait for the list to load</h3>
-          )}
+      <div className="itemlist">
+        <div className="itemlist_part">
+          <h2>All posts</h2>
+          <div className="posts">
+            {this.state.posts.length ? (
+              this.renderAllPosts()
+            ) : (
+              <h3>Wait for the list to load</h3>
+            )}
+          </div>
         </div>
 
         {/* //create new post */}
-        <div className="list_part">
-          <AddPost submitItem={this.handleSubmitPost} />
+        <div className="itemlist_part">
+          {loggedIn ? (
+            <AddPost submitItem={this.handleSubmitPost} />
+          ) : (
+            <h2>Please Login to create post</h2>
+          )}
+
           {/* //set submititem value as handlesubmitpost function state. handleSubmitItem is above */}
         </div>
       </div>
