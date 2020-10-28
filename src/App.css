@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
 .App {
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  width: 100vw;
+  width: 100%;
 }
 
 .App-logo {
@@ -32,9 +33,18 @@ a {
   color: white;
 }
 
+.navbar {
+  display: flex;
+  flex-flow: row;
+}
+
 .navbar > a {
   padding: 0 15px;
   justify-content: space-evenly;
+}
+
+.body {
+  margin-bottom: 20px;
 }
 
 .body > .list {
@@ -42,7 +52,42 @@ a {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  align-items: center;
 }
+
+.itemlist {
+  display: flex;
+  flex-flow: column-reverse;
+}
+.posts {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.users {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-eve;
+}
+.onepost {
+  display: flex;
+  flex-flow: column;
+  padding: 0 calc(10px + 2vmin);
+  margin: calc(10px + 2vmin) calc(20px + 2vmin);
+  border: 1px solid rgba(79, 79, 88, 0.486);
+  border-radius: 20px;
+  background-color: rgba(241, 168, 168, 0.404);
+}
+.onepost_parts {
+  text-align: left;
+}
+.oneuser {
+  display: flex;
+  flex-flow: column;
+}
+
 .auth_parts {
   display: flex;
   flex-flow: column;
@@ -72,9 +117,8 @@ input[type="submit" i] {
 }
 
 footer {
-  position: absolute;
+  position: inherit;
   bottom: 0px;
-  background-color: #2a3d5f;
   min-height: 5vh;
   min-width: 100vw;
   display: flex;
@@ -84,6 +128,9 @@ footer {
   font-size: calc(5px + 1vmin);
   color: rgb(22, 3, 3);
   padding: 10px;
+}
+.social > a {
+  color: rgb(29, 30, 109);
 }
 .social,
 .copyright {

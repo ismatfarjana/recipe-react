@@ -57,15 +57,6 @@ function Login() {
           Submit
         </button>
       </div>
-
-      {/* <div className="auth_parts">
-        <h2>Get User</h2>
-
-        <button type="submit" onClick={getUser}>
-          Submit
-        </button>
-        {data ? <h1>Welcome Back {data.name}</h1> : null}
-      </div> */}
     </div>
   );
 }
