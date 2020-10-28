@@ -69,7 +69,7 @@ a {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  justify-content: space-eve;
+  justify-content: space-evenly;
 }
 .onepost {
   display: flex;
